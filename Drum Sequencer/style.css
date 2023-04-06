@@ -11,7 +11,29 @@
     border-style: solid;
 }
 
+.timeActive {
+    padding: 2% 2% 2% 2%;
+    background-color: greenyellow;
+    border-style: solid;
+}
+
 .row {
     text-align: center;
     padding: 2% 2% 2% 2%;
+}
+
+.play {
+    background-color: greenyellow;
+}
+
+.pause {
+    background-color: red;
+}
+
+
+
+.buttonLeftCol {
+    float: left;
+    margin: auto;
+    padding-left: 0;
 }
