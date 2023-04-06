@@ -49,6 +49,7 @@
 h2 {
     text-align: center;
     margin: auto;
+    float: right;
 
 }
 
@@ -58,4 +59,25 @@ h2 {
 
     margin-top: 22px;
 
+}
+
+.kick-active {
+    background-color: burlywood;
+}
+
+.snare-active {
+    background-color: burlywood;
+}
+
+.clap-active {
+    background-color: burlywood;
+}
+
+.cowbell-active {
+    background-color: burlywood;
+}
+
+.cowbell {
+    width: 30px;
+    height: auto;
 }
