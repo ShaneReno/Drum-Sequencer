@@ -1,14 +1,10 @@
 var myInterval;
-var stopFlag = false;
 
 function loopingFunction(stopFlag) {
 
     var indexLength = document.getElementsByClassName('time').length;
     for (var i = 0; i < indexLength; i++) {
-        if (stopFlag) {
-            stopFlag = false;
-            return;
-        }
+
 
         (function (i) {
 
@@ -46,12 +42,14 @@ document.getElementsByClassName('startBtn')[0].addEventListener('click', functio
 
 document.getElementsByClassName('stopBtn')[0].addEventListener('click', function () {
     clearInterval(myInterval);
-    stopFlag = true;
-    var allElements = document.getElementsByClassName('time');
-    for (var i = 0; i < allElements.length; i++) {
-        allElements[i].classList.remove('timeActive'); // Remove the 'timeActive' class from all elements
-    }
+
+    setInterval(function () {
+        document.getElementsByClassName('sequenceBox')[7].classList.remove('timeActive');
+    }, 500);
+
+
     document.getElementsByClassName('stopBtn')[0].disabled = true;
     document.getElementsByClassName('startBtn')[0].disabled = false;
 
 });
+

@@ -3,12 +3,23 @@
     text-align: center;
     max-width: 80%;
     margin: 0 0 0 0;
+
 }
 
 .time {
     padding: 2% 2% 2% 2%;
+    background-color: grey;
+    border-style: solid;
+}
+
+.timeline {
+    padding: 2% 2% 2% 2%;
     background-color: silver;
     border-style: solid;
+    border-width: 3px;
+    margin-bottom: 0.5%;
+
+
 }
 
 .timeActive {
@@ -22,12 +33,23 @@
     padding: 2% 2% 2% 2%;
 }
 
+.timelineRow {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .play {
     background-color: greenyellow;
 }
 
 .pause {
     background-color: red;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+
 }
 
 
