@@ -15,15 +15,27 @@ document.getElementById('bpm').addEventListener('change', function (e) {
 
 function loopingFunction(stopFlag) {
     var bpm = 60000 / (document.getElementById('bpm').value);
+    var metronome = new Audio('./audio/metronome.mp3');
+    var newBarMetronome = new Audio('./audio/new-bar-metronome.mp3');
     var indexLength = document.getElementsByClassName('time').length;
     for (var i = 0; i < indexLength; i++) {
-        //console.log(" bpm is " + bpm);
-
-
         (function (i) {
 
 
+            var metronomeCheck = document.getElementById('metronome');
+
+
+
             setTimeout(function () {
+                if (metronomeCheck.checked) {
+                    if (i % 4 === 0) {
+                        newBarMetronome.play();
+                    }
+                    else {
+                        metronome.play();
+                    }
+                }
+
                 document.getElementsByClassName('time')[i].classList.add('timeActive');
                 if (i === 0) {
                     document.getElementsByClassName('time')[indexLength - 1].classList.remove('timeActive');
@@ -47,6 +59,9 @@ function loopingFunction(stopFlag) {
 document.getElementsByClassName('startBtn')[0].addEventListener('click', function () {
     var bpm = 60000 / (document.getElementById('bpm').value);
 
+    var playBtnAudio = new Audio('./audio/play-btn-audio.mp3');
+    playBtnAudio.play();
+
     loopingFunction();
     myInterval = setInterval(loopingFunction, bpm * document.getElementsByClassName('time').length);
     document.getElementsByClassName('startBtn')[0].disabled = true;
@@ -59,6 +74,8 @@ document.getElementsByClassName('startBtn')[0].addEventListener('click', functio
 document.getElementsByClassName('stopBtn')[0].addEventListener('click', function () {
     clearInterval(myInterval);
     var bpm = 60000 / (document.getElementById('bpm').value);
+    var stopBtnAudio = new Audio('./audio/stop-btn-audio.mp3');
+    stopBtnAudio.play();
     setInterval(function () {
         document.getElementsByClassName('sequenceBox')[7].classList.remove('timeActive');
     }, bpm);
