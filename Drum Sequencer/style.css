@@ -74,33 +74,27 @@ h2 {
 
 
 
-.buttonLeftCol {
-
-    margin-top: 22px;
-
-}
-
 .kick-active {
     background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
     transition: box-shadow 0.2s ease-in-out;
 }
 
 .snare-active {
     background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
     transition: box-shadow 0.2s ease-in-out;
 }
 
 .clap-active {
     background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
     transition: box-shadow 0.2s ease-in-out;
 }
 
 .cowbell-active {
     background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
     transition: box-shadow 0.2s ease-in-out;
 }
 
@@ -112,14 +106,17 @@ h2 {
 header {
     background-color: #262A56;
     margin-top: -3%;
+    box-shadow: 0 5px 5px black;
 }
+
+
 
 h1 {
     color: white;
     line-height: 1.5;
     font-size: 5rem;
     font-family: 'Rajdhani', sans-serif;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
 }
 
 .headText {
@@ -172,6 +169,7 @@ input[type="range"]:focus {
 button {
     height: 50px;
     width: 120px;
+    margin-left: -12px;
 }
 
 
@@ -190,11 +188,35 @@ footer {
 }
 
 
+
 p {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
 
 .socialsIcons {
-    padding: 2% 2% 3% 2%;
+    margin: 2.3% 2% 2.3% 3%;
+    color: #262A56;
+}
+
+.socialsIcons:hover {
+    color: hsl(34, 100%, 70%);
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    button {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
 }

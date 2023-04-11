@@ -52,6 +52,12 @@ function loopingFunction() {
                 cowbell.volume = cowbellVol;
 
 
+                var beatCount = i % 4 + 1;
+                var barCount = Math.ceil((i + 1) / 4);
+                document.getElementsByClassName('barCount')[0].innerHTML = beatCount + '/' + barCount;
+
+
+
 
 
                 if (metronomeCheck.checked) {
