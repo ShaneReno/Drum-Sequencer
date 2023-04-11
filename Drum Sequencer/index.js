@@ -13,7 +13,7 @@ document.getElementById('bpm').addEventListener('change', function (e) {
 
 
 
-function loopingFunction(stopFlag) {
+function loopingFunction() {
     var bpm = 60000 / (document.getElementById('bpm').value);
     //Audio for loop
     var metronome = new Audio('./audio/metronome.mp3');
@@ -23,7 +23,10 @@ function loopingFunction(stopFlag) {
     var clap = new Audio('./audio/clap.mp3');
     var cowbell = new Audio('./audio/cowbell.mp3');
     var indexLength = document.getElementsByClassName('time').length;
+
     for (var i = 0; i < indexLength; i++) {
+
+
         (function (i) {
 
 
@@ -32,6 +35,25 @@ function loopingFunction(stopFlag) {
 
 
             setTimeout(function () {
+                for (var j = 0; j <= 3; j++) {
+                    var vol = document.getElementsByClassName('form-range')[j].value;
+                    document.getElementsByClassName('form-range')[j].style.backgroundSize = vol + '% 100%';
+                }
+                var kickVol = document.getElementsByClassName('kickVol')[0].value / 100;
+                kick.volume = kickVol;
+
+                var snareVol = document.getElementsByClassName('snareVol')[0].value / 100;
+                snare.volume = snareVol;
+
+                var clapVol = document.getElementsByClassName('clapVol')[0].value / 100;
+                clap.volume = clapVol;
+
+                var cowbellVol = document.getElementsByClassName('cowbellVol')[0].value / 100;
+                cowbell.volume = cowbellVol;
+
+
+
+
                 if (metronomeCheck.checked) {
                     if (i % 4 === 0) {
                         newBarMetronome.play();
@@ -166,8 +188,11 @@ function cowbellPlay() {
 
 
 
+
+
 //Main Loop
 kickPlay();
 snarePlay();
 clapPlay();
 cowbellPlay();
+

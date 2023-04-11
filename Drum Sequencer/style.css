@@ -1,8 +1,18 @@
+body {
+    overflow-x: hidden;
+}
+
+
 .container-fluid {
-    padding: 3% 15% 1%;
+    padding: 2.3% 15% 1%;
     text-align: center;
     margin: 0 0 0 0;
+}
 
+footer .container-fluid {
+    padding: 0 15% 0;
+    text-align: center;
+    margin: 0 0 0 0;
 }
 
 .time {
@@ -15,7 +25,7 @@
     padding: 2% 2% 2% 2%;
     background-color: silver;
     border-style: solid;
-    border-width: 3px;
+    border-right: 0px;
     margin-bottom: 0.5%;
 
 
@@ -25,6 +35,16 @@
     padding: 2% 2% 2% 2%;
     background-color: greenyellow;
     border-style: solid;
+    box-shadow: 0 10px 50px greenyellow;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.timeline-last {
+    padding: 2% 2% 2% 2%;
+    background-color: silver;
+    border-style: solid;
+    margin-bottom: 0.5%;
+
 }
 
 .row {
@@ -46,11 +66,10 @@
 }
 
 h2 {
-    text-align: center;
-    margin: auto;
+    color: #262A56;
     float: right;
     font-size: 125%;
-
+    font-weight: lighter;
 }
 
 
@@ -62,19 +81,27 @@ h2 {
 }
 
 .kick-active {
-    background-color: burlywood;
+    background-color: hsl(34, 100%, 70%);
+    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .snare-active {
-    background-color: burlywood;
+    background-color: hsl(34, 100%, 70%);
+    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .clap-active {
-    background-color: burlywood;
+    background-color: hsl(34, 100%, 70%);
+    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .cowbell-active {
-    background-color: burlywood;
+    background-color: hsl(34, 100%, 70%);
+    box-shadow: 0 5px 15px hsl(34, 100%, 70%);
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .cowbell {
@@ -84,14 +111,90 @@ h2 {
 
 header {
     background-color: #262A56;
+    margin-top: -3%;
 }
 
 h1 {
     color: white;
     line-height: 1.5;
-    font-size: 4rem;
+    font-size: 5rem;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 .headText {
     color: white;
+}
+
+input[type="range"] {
+    outline: 1px solid black;
+    appearance: none;
+    width: 200px;
+    height: 5%;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    background-image: linear-gradient(#262A56, #555);
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -10px;
+    height: 35px;
+    width: 10px;
+    border-radius: 20%;
+    background: grey;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .2s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    z-index: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    background-color: greenyellow;
+    /* set the color you want */
+}
+
+
+input[type="range"]:focus {
+    outline: 1px solid black;
+}
+
+button {
+    height: 50px;
+    width: 120px;
+}
+
+
+.volumeH2 {
+    float: left;
+    font-weight: bold;
+}
+
+.drumsH2 {
+    float: right;
+    font-weight: bold;
+}
+
+footer {
+    color: #262A56;
+}
+
+
+p {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+.socialsIcons {
+    padding: 2% 2% 3% 2%;
 }
