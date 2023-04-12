@@ -1,20 +1,47 @@
-body {
-    overflow-x: hidden;
-}
-
-
+/* General styles for entire page */
 .container-fluid {
     padding: 2.3% 15% 1%;
     text-align: center;
     margin: 0 0 0 0;
 }
 
-footer .container-fluid {
-    padding: 0 15% 0;
+.row {
     text-align: center;
-    margin: 0 0 0 0;
+    padding: 2% 2% 2% 2%;
 }
 
+p {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+h2 {
+    color: #262A56;
+    float: right;
+    font-size: 125%;
+    font-weight: lighter;
+}
+
+
+/* Header */
+header {
+    background-color: #262A56;
+    margin-top: -3%;
+    box-shadow: 0 5px 5px black;
+}
+
+h1 {
+    color: white;
+    line-height: 1.5;
+    font-size: 5rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.headText {
+    color: white;
+}
+
+
+/* Timeline */
 .time {
     padding: 2% 2% 2% 2%;
     background-color: grey;
@@ -27,8 +54,6 @@ footer .container-fluid {
     border-style: solid;
     border-right: 0px;
     margin-bottom: 0.5%;
-
-
 }
 
 .timeActive {
@@ -44,12 +69,6 @@ footer .container-fluid {
     background-color: silver;
     border-style: solid;
     margin-bottom: 0.5%;
-
-}
-
-.row {
-    text-align: center;
-    padding: 2% 2% 2% 2%;
 }
 
 .timelineRow {
@@ -57,70 +76,36 @@ footer .container-fluid {
     padding-bottom: 0;
 }
 
-.play {
-    background-color: greenyellow;
-}
-
-.pause {
-    background-color: red;
-}
-
-h2 {
-    color: #262A56;
-    float: right;
-    font-size: 125%;
-    font-weight: lighter;
-}
-
-
-
-.kick-active {
-    background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.snare-active {
-    background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.clap-active {
-    background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
-    transition: box-shadow 0.2s ease-in-out;
-}
-
+.kick-active,
+.snare-active,
+.clap-active,
 .cowbell-active {
     background-color: hsl(34, 100%, 70%);
     box-shadow: 0 5px 10px hsl(34, 100%, 70%);
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.cowbell {
+.instrumentIcon {
     width: 30px;
     height: auto;
 }
 
-header {
-    background-color: #262A56;
-    margin-top: -3%;
-    box-shadow: 0 5px 5px black;
+.drumsH2 {
+    float: right;
+    font-weight: bold;
+}
+
+.volumeH2 {
+    float: left;
+    font-weight: bold;
 }
 
 
-
-h1 {
-    color: white;
-    line-height: 1.5;
-    font-size: 5rem;
-    font-family: 'Rajdhani', sans-serif;
-
-}
-
-.headText {
-    color: white;
+/* Controls - overwriting default webkits */
+button {
+    height: 50px;
+    width: 120px;
+    margin-left: -12px;
 }
 
 input[type="range"] {
@@ -133,7 +118,6 @@ input[type="range"] {
     background-image: linear-gradient(#262A56, #555);
     background-size: 80% 100%;
     background-repeat: no-repeat;
-
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -158,41 +142,23 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type="range"]::-webkit-slider-thumb:active {
     background-color: greenyellow;
-    /* set the color you want */
 }
-
 
 input[type="range"]:focus {
     outline: 1px solid black;
 }
 
-button {
-    height: 50px;
-    width: 120px;
-    margin-left: -12px;
-}
 
-
-.volumeH2 {
-    float: left;
-    font-weight: bold;
-}
-
-.drumsH2 {
-    float: right;
-    font-weight: bold;
-}
-
+/* Footer */
 footer {
     color: #262A56;
 }
 
-
-
-p {
-    font-family: 'Nanum Gothic', sans-serif;
+footer .container-fluid {
+    padding: 0 15% 0;
+    text-align: center;
+    margin: 0 0 0 0;
 }
-
 
 .socialsIcons {
     margin: 2.3% 2% 2.3% 3%;
@@ -204,6 +170,7 @@ p {
 }
 
 
+/* Media queries for smaller screens */
 @media (max-width: 768px) {
     h1 {
         font-size: 3rem;
