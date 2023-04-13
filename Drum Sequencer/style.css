@@ -45,13 +45,14 @@ h1 {
 .time {
     padding: 2% 2% 2% 2%;
     background-color: grey;
-    border-style: solid;
+    box-shadow: -2px 3px 3px black;
 }
 
 .timeline {
     padding: 2% 2% 2% 2%;
     background-color: silver;
-    border-style: solid;
+    border-style: none;
+    box-shadow: -1px 2px 2px black;
     border-right: 0px;
     margin-bottom: 0.5%;
 }
@@ -59,16 +60,18 @@ h1 {
 .timeActive {
     padding: 2% 2% 2% 2%;
     background-color: greenyellow;
-    border-style: solid;
+    border-style: none;
     box-shadow: 0 10px 50px greenyellow;
     transition: box-shadow 0.3s ease-in-out;
 }
 
+
 .timeline-last {
     padding: 2% 2% 2% 2%;
     background-color: silver;
-    border-style: solid;
     margin-bottom: 0.5%;
+    border-style: none;
+    box-shadow: -1px 2px 2px black;
 }
 
 .timelineRow {
@@ -81,9 +84,10 @@ h1 {
 .clap-active,
 .cowbell-active {
     background-color: hsl(34, 100%, 70%);
-    box-shadow: 0 5px 10px hsl(34, 100%, 70%);
+    box-shadow: 0 3px 3px hsl(34, 40%, 40%);
     transition: box-shadow 0.2s ease-in-out;
 }
+
 
 .instrumentIcon {
     width: 30px;
